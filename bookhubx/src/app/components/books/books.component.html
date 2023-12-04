@@ -1,0 +1,16 @@
+<!-- books.component.html -->
+
+<div class="card-container">
+  <div *ngFor="let book of books" class="card" (click)="viewBookDetails(book.id)">
+    <!-- <p-card> -->
+      <img [src]="book.image" alt="{{ book.title }}" class="book-image" />
+      <div class="book-details">
+        <h2>{{ book.title }}</h2>
+        <p>Author: {{ book.author }}</p>
+        <p>Price: ${{ book.price }}</p>
+        <!-- Add other details as needed -->
+      </div>
+      <a [routerLink]="['/books', book.id]">View Details</a>
+    <!-- </p-card> -->
+  </div>
+</div>

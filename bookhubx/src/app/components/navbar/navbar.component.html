@@ -1,0 +1,39 @@
+<!-- navbar.component.html -->
+
+<nav class="navbar">
+  <div class="logo" (click)="goToHome()">
+    <img src="assets/images/bookhubX_logo.png" alt="BookHubX Logo" />
+  </div>
+
+  <ul class="nav-links">
+    <li><a routerLink=""></a></li>
+    <li><a routerLink="/books">Books</a></li>
+    <li class="dropdown">
+      <a routerLink="/browse">Browse</a>
+      <ul class="dropdown-content">
+        <!-- Add dropdown items for different book genres -->
+        <li *ngFor="let genre of genres">
+          <a [routerLink]="['/browse', genre]">{{ genre }}</a>
+        </li>
+        <!-- Add more genres as needed -->
+      </ul>
+    </li>
+  </ul>
+
+  <div class="search-box">
+    <span class="p-input-icon-left">
+      <i class="pi pi-search"></i>
+      <input type="text" pInputText [(ngModel)]="searchQuery" />
+    </span>
+    <button pButton type="button" label="Search" (click)="search()"></button>
+  </div>
+
+  <div class="auth-links">
+    <a routerLink="/login">Login</a>
+    <a routerLink="/signup">Signup</a>
+  </div>
+
+  <div class="hamburger-menu">
+    <!-- Add your hamburger menu icon here -->
+  </div>
+</nav>

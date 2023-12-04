@@ -1,0 +1,109 @@
+/* home.component.scss */
+
+.container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.svg-curve {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Send the SVG curve to the back */
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Bring the content to the front */
+  text-align: center; /* Center the text horizontally */
+}
+
+.content h3 {
+  font-size: 2.5rem;
+  margin-top: 170px;
+  margin-right: 350px;
+  color: rgb(74, 193, 240); /* Set text color to white or a contrasting color for better visibility */
+}
+
+/* Add additional styling as needed */
+/* book-slider.component.scss */
+
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slides-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  width: 100%;
+  margin-right: 20px; /* Adjust the margin as needed */
+  margin-top: 110px;
+  position: relative;
+}
+
+img {
+  width: auto;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.slide:hover .overlay {
+  opacity: 1;
+}
+
+.read {
+  filter: grayscale(100%);
+  /* Add additional styling for read books if needed */
+}
+
+.navigation {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Add media queries for responsiveness if needed */
+
+

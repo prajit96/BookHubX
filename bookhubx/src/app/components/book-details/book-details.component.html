@@ -1,0 +1,8 @@
+<div *ngIf="book">
+  <h2>{{ book.title }}</h2>
+  <p>{{ book.author }}</p>
+  <!-- Add more details as needed -->
+</div>
+<div *ngIf="!book">
+  <p>Loading...</p>
+</div>

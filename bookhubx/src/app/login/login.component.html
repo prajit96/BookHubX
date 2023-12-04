@@ -1,0 +1,20 @@
+<!-- login.component.html -->
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form (ngSubmit)="onLogin()">
+      <div class="p-field">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" [(ngModel)]="loginForm.username" pInputText />
+      </div>
+      <div class="p-field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" [(ngModel)]="loginForm.password" pPassword />
+      </div>
+      <button type="submit" pButton label="Login"></button>
+    </form>
+  
+    <!-- Display Alerts -->
+    <p-messages [value]="loginMessages"></p-messages>
+  </div>
+  

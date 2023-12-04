@@ -1,0 +1,35 @@
+<!-- home.component.html -->
+
+<div class="container">
+  <div class="svg-curve">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#35399d" fill-opacity="1" d="M0,288L60,245.3C120,203,240,117,360,85.3C480,53,600,75,720,117.3C840,160,960,224,1080,224C1200,224,1320,160,1380,128L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+    </svg>
+  </div>
+  <div class="content">
+    <h3>Welcome to BookHubX</h3>
+    
+    <!-- Additional content goes here -->
+    <div class="slider">
+      <div class="slides-container">
+        
+        <div *ngFor="let book of visibleBooks; let i = index" class="slide" [ngClass]="{'read': book.read}">
+          <img [src]="book.imageUrl" alt="{{ book.title }}" />
+          <div class="overlay">
+            <button (click)="toggleReadStatus(i)">
+              {{ book.read ? 'Mark as Unread' : 'Mark as Read' }}
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="navigation">
+        <button (click)="prev()"><i class="fas fa-chevron-left"></i></button>
+        <button (click)="next()"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+    
+  </div>
+ <!-- book-slider.component.html -->
+
+
+

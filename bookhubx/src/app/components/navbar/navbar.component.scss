@@ -1,0 +1,71 @@
+
+/* navbar.component.scss */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #35399d;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    .logo img {
+      width: 130px; /* Adjust the logo size as needed */
+    }
+  
+    .nav-links {
+      list-style-type: none;
+      display: flex;
+      gap: 20px;
+  
+      li {
+        position: relative;
+  
+        a {
+          text-decoration: none;
+          color: white;
+        }
+  
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #35399d;
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  
+          li {
+            a {
+              color: white;
+              padding: 12px;
+              display: block;
+            }
+          }
+        }
+  
+        &:hover .dropdown-content {
+          display: block;
+        }
+      }
+    }
+  
+    .search-box {
+      display: flex;
+      gap: 10px;
+  
+      p-inputText {
+        width: 200px; /* Adjust the width as needed */
+      }
+    }
+  
+    .auth-links {
+      a {
+        text-decoration: none;
+        color: white;
+        margin-left: 10px;
+      }
+    }
+  
+    .hamburger-menu {
+      /* Add your hamburger menu styling here */
+    }
+  }
+  
